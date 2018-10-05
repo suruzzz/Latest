@@ -36,7 +36,7 @@
             <item
                 android:id="@+id/nav_EXIT"
                 android:icon="@drawable/exit_to_app"
-                android:title="Google Sheet" />
+                android:title="Exit" />
 
 
         </menu>

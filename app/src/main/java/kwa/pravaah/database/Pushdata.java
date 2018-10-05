@@ -53,7 +53,7 @@ public class Pushdata extends AsyncTask<String, Void, String> {
             JSONObject postDataParams = new JSONObject();
 
             String no = SMSListener.no;
-            if (no == "8547155003") {
+            /*if (no == "8547155003") {*/
                 String id = "1nLLJuKirIVX3fTrsOUXVIYc3DgEeEKkXNAQ5piqb7To";
 
                 postDataParams.put("number", arg0[0]);
@@ -64,7 +64,7 @@ public class Pushdata extends AsyncTask<String, Void, String> {
                 postDataParams.put("auto", arg0[5]);
                 postDataParams.put("tm", arg0[6]);
                 postDataParams.put("id", id);
-            }
+          /*  }
             else if (no == "8848883046")
             {
                 String id = "1XxoIXd3tKI48m_MYug2wu1gVgf5vpK_ximIGvfYxZgg";
@@ -93,7 +93,7 @@ public class Pushdata extends AsyncTask<String, Void, String> {
                 postDataParams.put("id", id);
 
 
-            }
+            }*/
 
 
             Log.e("params",postDataParams.toString());

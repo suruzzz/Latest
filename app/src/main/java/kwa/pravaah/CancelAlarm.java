@@ -4,6 +4,7 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -116,6 +117,11 @@ public class CancelAlarm extends AppCompatActivity
             startActivity(i3);
 
         } else if (id == R.id.nav_share) {
+            String url ="https://docs.google.com/spreadsheets/d/1nLLJuKirIVX3fTrsOUXVIYc3DgEeEKkXNAQ5piqb7To/edit#gid=0";
+
+            Uri uriUrl = Uri.parse(url);
+            Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+            startActivity(launchBrowser);
 
         }
 
