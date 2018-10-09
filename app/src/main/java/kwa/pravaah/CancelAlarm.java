@@ -117,7 +117,7 @@ public class CancelAlarm extends AppCompatActivity
             startActivity(i3);
 
         } else if (id == R.id.nav_share) {
-            String url ="https://docs.google.com/spreadsheets/d/1nLLJuKirIVX3fTrsOUXVIYc3DgEeEKkXNAQ5piqb7To/edit#gid=0";
+            String url ="https://docs.google.com/spreadsheets/d/1IcsEfodyeh7z6l_I15fI2LqKCe3YOrJnPnEQlChDwNo/edit#gid=0";
 
             Uri uriUrl = Uri.parse(url);
             Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);

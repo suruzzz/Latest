@@ -116,7 +116,7 @@ public class AddAlarm extends AppCompatActivity
                     assert manager != null;
                     //manager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pendingIntent);
 
-                    manager.setInexactRepeating(AlarmManager.RTC_WAKEUP,cal.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
+                    manager.setInexactRepeating(AlarmManager.RTC_WAKEUP,cal.getTimeInMillis(),24*60*60*1000,pendingIntent);
 
                     Toast.makeText(AddAlarm.this, "Shift set", Toast.LENGTH_SHORT).show();
                     String alarmID_to_on= String.valueOf(alarmID);
@@ -174,7 +174,7 @@ public class AddAlarm extends AppCompatActivity
 
 
                         assert manager != null;
-                        manager.setInexactRepeating(AlarmManager.RTC_WAKEUP,cal.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
+                        manager.setInexactRepeating(AlarmManager.RTC_WAKEUP,cal.getTimeInMillis(),24*60*60*1000,pendingIntent);
 
 
                         Toast.makeText(AddAlarm.this, "Shift set", Toast.LENGTH_SHORT).show();
@@ -229,7 +229,7 @@ public class AddAlarm extends AppCompatActivity
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_gsheet) {
-            String url ="https://docs.google.com/spreadsheets/d/1nLLJuKirIVX3fTrsOUXVIYc3DgEeEKkXNAQ5piqb7To/edit#gid=0";
+            String url ="https://docs.google.com/spreadsheets/d/1IcsEfodyeh7z6l_I15fI2LqKCe3YOrJnPnEQlChDwNo/edit#gid=0";
 
             Uri uriUrl = Uri.parse(url);
             Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
@@ -284,6 +284,9 @@ public class AddAlarm extends AppCompatActivity
             //textView1.setText(name);
             if (PhoneNo.length() == 13)
                 PhoneNo = PhoneNo.substring(3, 13);
+            else if (PhoneNo.length() == 14)
+                PhoneNo= PhoneNo.substring(4);
+
             Phone.setText(PhoneNo);
         } catch (Exception e) {
             e.printStackTrace();
