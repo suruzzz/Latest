@@ -56,10 +56,7 @@ public class SMSListener extends BroadcastReceiver {
 
                         DbManager dbManager = new DbManager(context);
                         no = message.getSender();
-                        if(no.length()==13)
-                            no = no.substring(3,13);
-                        else if (no.length()==12)
-                            no = no.substring(2,12);
+                        no = no.replace("+91", "0");
                         try {
                             boolean isInserted = dbManager.insertUserDetails(message.getSender(), "", message.getPower(), message.getPump(), ""
                                     , "", "", "");

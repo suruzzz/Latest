@@ -16,7 +16,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 
     private static final String TAG = "KWATest: AlarmReceiver";
     private String POWER="ON";
-    String number;
+    String number,number2;
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -36,12 +36,10 @@ public class AlarmReceiver extends BroadcastReceiver {
             Toast.makeText(context, No, Toast.LENGTH_SHORT).show();
             // AppUtils.makeCall(context,No);
 
-        if(android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.M)
+       /* if(android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.M)
              number = No.substring(0, 10);
-        else
-             number = No.substring(0,12);
-
-
+        else*/
+            number  = No.replace(",2", "");
             Cursor cursor=db.getPowerStatus(number);
             if(cursor.getCount()!=0) {
                 cursor.moveToFirst();
@@ -58,10 +56,15 @@ public class AlarmReceiver extends BroadcastReceiver {
             }
 
 
+
         }
 
 
 
-
     }
+
+
+
+
+
 

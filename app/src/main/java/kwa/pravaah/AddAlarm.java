@@ -282,10 +282,12 @@ public class AddAlarm extends AppCompatActivity
             Name = cursor.getString(nameIndex);
             // Set the value to the textviews
             //textView1.setText(name);
-            if (PhoneNo.length() == 13)
+            /*if (PhoneNo.length() == 13)
                 PhoneNo = PhoneNo.substring(3, 13);
             else if (PhoneNo.length() == 14)
-                PhoneNo= PhoneNo.substring(4);
+                PhoneNo= PhoneNo.substring(4,14);
+*/
+             PhoneNo = PhoneNo.replace("+91", "0");//you can instead use Phone.NORMALIZED_NUMBER if you're using a high-enough API level
 
             Phone.setText(PhoneNo);
         } catch (Exception e) {
