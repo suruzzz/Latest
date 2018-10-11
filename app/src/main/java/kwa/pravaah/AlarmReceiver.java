@@ -16,7 +16,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 
     private static final String TAG = "KWATest: AlarmReceiver";
     private String POWER="ON";
-    String number,number2;
+    String number [];
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -39,8 +39,9 @@ public class AlarmReceiver extends BroadcastReceiver {
        /* if(android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.M)
              number = No.substring(0, 10);
         else*/
-            number  = No.replace(",2", "");
-            Cursor cursor=db.getPowerStatus(number);
+            number = No.split(",");
+        Toast.makeText(context, "in receiver "+ number[0], Toast.LENGTH_SHORT).show();
+            Cursor cursor=db.getPowerStatus(number[0]);
             if(cursor.getCount()!=0) {
                 cursor.moveToFirst();
                 power = cursor.getString(cursor.getColumnIndex(db.POWER));
