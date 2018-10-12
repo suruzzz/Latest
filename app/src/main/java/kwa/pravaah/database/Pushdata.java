@@ -52,7 +52,7 @@ public class Pushdata extends AsyncTask<String, Void, String> {
           //  URL url = new URL("https://script.google.com/macros/s/AKfycbwWlckFBk9nif9KHG2J5s7-S9RkkUnoUSo-HtnGU_tql2-LA_I/exec");
             JSONObject postDataParams = new JSONObject();
 
-            String no = SMSListener.no;
+           // String no = SMSListener.no;
             /*if (no == "8547155003") {*/
                 String id = "1IcsEfodyeh7z6l_I15fI2LqKCe3YOrJnPnEQlChDwNo";
 

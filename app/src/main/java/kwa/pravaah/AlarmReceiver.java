@@ -40,6 +40,7 @@ public class AlarmReceiver extends BroadcastReceiver {
              number = No.substring(0, 10);
         else*/
             number = No.split(",");
+
         Toast.makeText(context, "in receiver "+ number[0], Toast.LENGTH_SHORT).show();
             Cursor cursor=db.getPowerStatus(number[0]);
             if(cursor.getCount()!=0) {
