@@ -79,7 +79,7 @@ public class DbManager extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put(POWER, power);
         contentValues.put(PUMP, pump);
-        db.update(TABLE_SMS,contentValues, MOBILE_NO + "=" + no,null);
+        db.update(TABLE_SMS,contentValues, MOBILE_NO + "=" + "'" +no+ "'",null);
         return true;
 
     }
@@ -131,6 +131,7 @@ public class DbManager extends SQLiteOpenHelper {
         return res;
     }
 
+
     public void updatePumpStatus(String no, String pump) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -139,13 +140,6 @@ public class DbManager extends SQLiteOpenHelper {
 
     }
 
-    public void updatePowerStatus(String no, String power) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(POWER, power);
-        db.update(TABLE_SMS,contentValues,MOBILE_NO+"="+no,null);
-
-    }
 
     public void addPendingIntent_ON(String no, String pending) {
         SQLiteDatabase db = this.getWritableDatabase();

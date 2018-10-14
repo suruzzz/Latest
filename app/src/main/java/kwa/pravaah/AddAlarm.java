@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.design.widget.FloatingActionButton;
@@ -116,7 +117,11 @@ public class AddAlarm extends AppCompatActivity
                     assert manager != null;
                     //manager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pendingIntent);
 
+                   /* if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        manager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,cal.getTimeInMillis(),pendingIntent);
+                    }*/
                     manager.setInexactRepeating(AlarmManager.RTC_WAKEUP,cal.getTimeInMillis(),24*60*60*1000,pendingIntent);
+
 
                     Toast.makeText(AddAlarm.this, "Shift set", Toast.LENGTH_SHORT).show();
                     String alarmID_to_on= String.valueOf(alarmID);
@@ -175,6 +180,7 @@ public class AddAlarm extends AppCompatActivity
 
                         assert manager != null;
                         manager.setInexactRepeating(AlarmManager.RTC_WAKEUP,cal.getTimeInMillis(),24*60*60*1000,pendingIntent);
+
 
 
                         Toast.makeText(AddAlarm.this, "Shift set", Toast.LENGTH_SHORT).show();

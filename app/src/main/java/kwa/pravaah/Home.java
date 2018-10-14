@@ -78,7 +78,7 @@ public class Home extends AppCompatActivity
                     while (cursor.moveToNext()) {
 
 
-                         String id_str = cursor.getString(cursor.getColumnIndex(db.ID));
+                        String id_str = cursor.getString(cursor.getColumnIndex(db.ID));
                         String name_str = cursor.getString(cursor.getColumnIndex(db.NAME));
                         String power_str = cursor.getString(cursor.getColumnIndex(db.POWER));
                         String pump_str = cursor.getString(cursor.getColumnIndex(db.PUMP));

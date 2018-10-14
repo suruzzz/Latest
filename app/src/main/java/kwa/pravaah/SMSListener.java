@@ -3,6 +3,7 @@ package kwa.pravaah;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Telephony;
@@ -20,9 +21,11 @@ import kwa.pravaah.database.Pushdata;
 import kwa.pravaah.model.message;
 
 public class SMSListener extends BroadcastReceiver {
+    private static final String TAG = "KWATest: smslistener";
 
    public static String no;
-
+    String pwr;
+    String pmp;
     @Override
     public void onReceive(final Context context, Intent intent) {
 
@@ -55,17 +58,18 @@ public class SMSListener extends BroadcastReceiver {
                         Toast.makeText(context, "message received", Toast.LENGTH_SHORT).show();
 
                         DbManager dbManager = new DbManager(context);
-                        no = message.getSender();
+                        no = message.getSender().toString();
                         no = no.replace("+91", "0");
+                      //  no = no.substring(3,13);
+                        String pow = message.getPower().toString();
+                        String pump = message.getPump().toString();
+
                         try {
-                            boolean isInserted = dbManager.insertUserDetails(message.getSender(), "", message.getPower(), message.getPump(), ""
-                                    , "", "", "");
+                           /* boolean isInserted = dbManager.insertUserDetails(message.getSender(), "", message.getPower(), message.getPump(), ""
+                                    , "", "", "");*/
 
-                          /*  boolean isInserted = dbManager.UpdateDetails(message.getSender(),"",message.getPower(), message.getPump(),
-                                            AddAlarm.GAlarm_on, "", message.getErr(), message.getEventHrs(), message.getAuto(),
-                                            message.gettm(), "", "", "");
+                           boolean isInserted = dbManager.UpdateDetails(no,pow,pump);
 
-*/
 
                             String[] params = {message.getSender(), message.getPower(), message.getPump(), message.getErr(),
                                     message.getEventHrs(), message.getAuto(), message.getTm()};
@@ -87,9 +91,16 @@ public class SMSListener extends BroadcastReceiver {
 
 
                             if (isInserted) {
-                                Log.e("inserted", "successfully");
-                                Toast.makeText(context, "message inserted to db", Toast.LENGTH_SHORT).show();
+                                Cursor cursor=dbManager.getPowerStatus(no);
+                                if(cursor.getCount()!=0) {
+                                    cursor.moveToFirst();
+                                  String  power = cursor.getString(cursor.getColumnIndex(dbManager.POWER));
+
+                                    Log.e("inserted", "successfully" + power);
+                                    Toast.makeText(context, "message inserted to db , Power Status : " +power, Toast.LENGTH_SHORT).show();
+                                }
                             }
+
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
