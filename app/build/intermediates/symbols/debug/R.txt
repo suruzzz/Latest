@@ -1109,9 +1109,10 @@ int menu activity_cancel_alarm_drawer 0x7f0b0001
 int menu activity_home_drawer 0x7f0b0002
 int mipmap ic_launcher 0x7f0c0000
 int mipmap ic_launcher_round 0x7f0c0001
-int mipmap pra 0x7f0c0002
-int mipmap pravah 0x7f0c0003
-int mipmap pravah_round 0x7f0c0004
+int mipmap pprpic 0x7f0c0002
+int mipmap pra 0x7f0c0003
+int mipmap pravah 0x7f0c0004
+int mipmap pravah_round 0x7f0c0005
 int string abc_action_bar_home_description 0x7f0d0000
 int string abc_action_bar_up_description 0x7f0d0001
 int string abc_action_menu_overflow_description 0x7f0d0002

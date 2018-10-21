@@ -504,6 +504,10 @@
         "source": "C:\\Users\\Dell\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\0f22267af86001e2abd1e9e1f25cc714\\res\\drawable-mdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
+        "merged": "E:\\AndStuio\\PraVaah-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_pprpic.png.flat",
+        "source": "E:\\AndStuio\\PraVaah-master\\app\\src\\main\\res\\mipmap-xhdpi\\pprpic.png"
+    },
+    {
         "merged": "E:\\AndStuio\\PraVaah-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Dell\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\0f22267af86001e2abd1e9e1f25cc714\\res\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
@@ -658,6 +662,10 @@
     {
         "merged": "E:\\AndStuio\\PraVaah-master\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_shrink_fade_out_from_bottom.xml.flat",
         "source": "C:\\Users\\Dell\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\0f22267af86001e2abd1e9e1f25cc714\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\AndStuio\\PraVaah-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_pprpic.png.flat",
+        "source": "E:\\AndStuio\\PraVaah-master\\app\\src\\main\\res\\mipmap-hdpi\\pprpic.png"
     },
     {
         "merged": "E:\\AndStuio\\PraVaah-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -1408,6 +1416,10 @@
         "source": "C:\\Users\\Dell\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\0f22267af86001e2abd1e9e1f25cc714\\res\\color\\switch_thumb_material_dark.xml"
     },
     {
+        "merged": "E:\\AndStuio\\PraVaah-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_pprpic.png.flat",
+        "source": "E:\\AndStuio\\PraVaah-master\\app\\src\\main\\res\\mipmap-mdpi\\pprpic.png"
+    },
+    {
         "merged": "E:\\AndStuio\\PraVaah-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Dell\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\0f22267af86001e2abd1e9e1f25cc714\\res\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
@@ -1808,6 +1820,10 @@
         "source": "C:\\Users\\Dell\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\0f22267af86001e2abd1e9e1f25cc714\\res\\drawable-xxhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
+        "merged": "E:\\AndStuio\\PraVaah-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_pprpic.png.flat",
+        "source": "E:\\AndStuio\\PraVaah-master\\app\\src\\main\\res\\mipmap-xxxhdpi\\pprpic.png"
+    },
+    {
         "merged": "E:\\AndStuio\\PraVaah-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_exit_to_app.png.flat",
         "source": "E:\\AndStuio\\PraVaah-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\exit_to_app.png"
     },
@@ -2034,6 +2050,10 @@
     {
         "merged": "E:\\AndStuio\\PraVaah-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_alarm_off.png.flat",
         "source": "E:\\AndStuio\\PraVaah-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\alarm_off.png"
+    },
+    {
+        "merged": "E:\\AndStuio\\PraVaah-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_pprpic.png.flat",
+        "source": "E:\\AndStuio\\PraVaah-master\\app\\src\\main\\res\\mipmap-xxhdpi\\pprpic.png"
     },
     {
         "merged": "E:\\AndStuio\\PraVaah-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",

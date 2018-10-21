@@ -120,10 +120,13 @@ public class AddAlarm extends AppCompatActivity
                    /* if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         manager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,cal.getTimeInMillis(),pendingIntent);
                     }*/
-                    manager.setInexactRepeating(AlarmManager.RTC_WAKEUP,cal.getTimeInMillis(),24*60*60*1000,pendingIntent);
+                    if(android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
+                        manager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), 24 * 60 * 60 * 1000, pendingIntent);
+                    }else if(android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                        manager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), 24 * 60 * 60 * 1000, pendingIntent);
+                    }
 
-
-                    Toast.makeText(AddAlarm.this, "Shift set", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddAlarm.this, "Shift set", Toast.LENGTH_SHORT).show();
                     String alarmID_to_on= String.valueOf(alarmID);
 
                     GAlarm_on = alarmID_to_on;
@@ -179,9 +182,11 @@ public class AddAlarm extends AppCompatActivity
 
 
                         assert manager != null;
-                        manager.setInexactRepeating(AlarmManager.RTC_WAKEUP,cal.getTimeInMillis(),24*60*60*1000,pendingIntent);
-
-
+                    if(android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
+                        manager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), 24 * 60 * 60 * 1000, pendingIntent);
+                    }else if(android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                        manager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), 24 * 60 * 60 * 1000, pendingIntent);
+                    }
 
                         Toast.makeText(AddAlarm.this, "Shift set", Toast.LENGTH_SHORT).show();
 

@@ -117,12 +117,12 @@ public class DbManager extends SQLiteOpenHelper {
 
     public String getPendingON(String no) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery("select " + PENDING_INTENT_ON + " from " + TABLE_SMS + " where " + PENDING_INTENT_ON + " = " +  no, null);
+        Cursor res = db.rawQuery("select " + PENDING_INTENT_ON + " from " + TABLE_SMS + " where " + PENDING_INTENT_ON + " = " + "'"+ no +"'", null);
         return PENDING_INTENT_ON;
     }
     public String getPendingOFF(String no) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery("select " + PENDING_INTENT_OFF + " from " + TABLE_SMS + " where " + PENDING_INTENT_ON + " = " + no , null);
+        Cursor res = db.rawQuery("select " + PENDING_INTENT_OFF + " from " + TABLE_SMS + " where " + PENDING_INTENT_ON + " = " +"'"+ no+"'" , null);
         return PENDING_INTENT_OFF;
     }
     public Cursor getPendingIntent(String no) {
@@ -145,7 +145,7 @@ public class DbManager extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(PENDING_INTENT_ON, pending);
-        db.update(TABLE_SMS,contentValues,MOBILE_NO+"="+no,null);
+        db.update(TABLE_SMS,contentValues,MOBILE_NO+"="+"'"+no+"'",null);
 
     }
 
@@ -153,7 +153,7 @@ public class DbManager extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(PENDING_INTENT_OFF, pending);
-        db.update(TABLE_SMS,contentValues, PENDING_INTENT_ON + "=" + pending_on,null);
+        db.update(TABLE_SMS,contentValues, PENDING_INTENT_ON + "=" +"'"+ pending_on+"'",null);
 
     }
 
@@ -169,7 +169,7 @@ public class DbManager extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(TIME_OFF, time);
-        db.update(TABLE_SMS,contentValues,PENDING_INTENT_ON + "=" + pending_on,null);
+        db.update(TABLE_SMS,contentValues,PENDING_INTENT_ON + "=" +"'"+ pending_on+"'",null);
     }
 
     public void deleteRow(String data)
