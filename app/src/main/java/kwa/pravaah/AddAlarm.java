@@ -107,6 +107,13 @@ public class AddAlarm extends AppCompatActivity
                     Intent myIntent = new Intent(AddAlarm.this, AlarmReceiver.class);
 
                     String num = Phone.getText().toString();
+                    if(num.length()==10)
+                    {
+                        num = "0"+num;
+                    }
+                    else {
+                        num = num.replace("+91", "0");//you can instead use Phone.NORMALIZED_NUMBER if you're using a high-enough API level
+                    }
                     String PhNo = num+",2";
                     myIntent.putExtra("Number", PhNo);
 
@@ -151,6 +158,13 @@ public class AddAlarm extends AppCompatActivity
 
 
                     String num=Phone.getText().toString();
+                    if(num.length()==10)
+                    {
+                        num = "0"+num;
+                    }
+                    else {
+                        num = num.replace("+91", "0");//you can instead use Phone.NORMALIZED_NUMBER if you're using a high-enough API level
+                    }
                     Calendar cal = Calendar.getInstance();
 
 
@@ -310,7 +324,6 @@ public class AddAlarm extends AppCompatActivity
             else if (PhoneNo.length() == 14)
                 PhoneNo= PhoneNo.substring(4,14);
 */
-             PhoneNo = PhoneNo.replace("+91", "0");//you can instead use Phone.NORMALIZED_NUMBER if you're using a high-enough API level
 
             Phone.setText(PhoneNo);
         } catch (Exception e) {

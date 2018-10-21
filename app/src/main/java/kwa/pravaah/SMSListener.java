@@ -78,7 +78,7 @@ public class SMSListener extends BroadcastReceiver {
                                 @Override
                                 public void processFinish(Object output) {
 
-                                    if ((String) output == "Success") {
+                                    if ( output == "Success") {
                                         Toast.makeText(context, "Sheet Updated Successfully", Toast.LENGTH_SHORT).show();
                                     } else {
                                         Toast.makeText(context, "Error in Sheet Updation", Toast.LENGTH_SHORT).show();
@@ -96,7 +96,7 @@ public class SMSListener extends BroadcastReceiver {
                                     cursor.moveToFirst();
                                   String  power = cursor.getString(cursor.getColumnIndex(dbManager.POWER));
 
-                                    Log.e("inserted", "successfully" + power);
+                                    Log.e("inserted", "successfully ,Power:" + power);
                                     Toast.makeText(context, "message inserted to db , Power Status : " +power, Toast.LENGTH_SHORT).show();
                                 }
                             }
